@@ -1,6 +1,7 @@
 from pkg_resources import DistributionNotFound, get_distribution
 
-from .functions1 import *  # noqa
+from .constants import *
+from .functions1 import *
 
 try:
     __version__ = get_distribution(__name__).version
