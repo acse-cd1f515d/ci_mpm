@@ -36,10 +36,9 @@ jobs:
         conda env create -f environment.yml -q
         exec bash
         conda init bash
-        conda activate ci
-        pip install .
 
     - name: Test with pytest
       run: |
-        conda env list
+        conda activate ci
+        pip install .
         pytest tests/
