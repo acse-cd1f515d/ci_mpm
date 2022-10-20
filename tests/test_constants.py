@@ -13,4 +13,4 @@ class TestPi(object):
 
     def test_python_version():
         from platform import python_version
-        assert python_version() == '3.7.10'
+        assert python_version() == '3.9.15'
