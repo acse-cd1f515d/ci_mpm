@@ -6,7 +6,7 @@ on:
         - master
 
 jobs:
-  flake8:
+  doc:
 
     runs-on: ubuntu-latest
 
@@ -20,7 +20,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        apt-get install texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+        apt-get install texlive
         pip install --upgrade pip
         pip install sphinx
     
