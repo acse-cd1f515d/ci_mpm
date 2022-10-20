@@ -20,7 +20,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        apt install texlive
+        apt-get install texlive
         pip install --upgrade pip
         pip install sphinx
     
