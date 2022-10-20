@@ -1,39 +1,38 @@
 name: pytest-unit-tests
 
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the master branch
   push:
     branches:
       - master
   pull_request:
     branches:
       - master
-  workflow_dispatch:
-    inputs:
-      tags:
-        description: 'Run this workflow'
 
 jobs:
-  pytest:
-    name: unit testing
-    runs-on: ubuntu-latest
+  miniconda:
+    name: Miniconda (${{ matrix.os }}, python${{ matrix.python-version }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, ubuntu-22.04]
+        python-version: ['3.6', '3.11']
 
     steps:
-    - name: Checkout simple_functions
-      uses: actions/checkout@v3
-
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v4
+    - uses: actions/checkout@v3
+    - uses: conda-incubator/setup-miniconda@v2
+    - name: Set up Python ${{ matrix.python-version }}
       with:
-        python-version: 3.9
-
+          activate-environment: ${{ matrix.os }}-${{ matrix.python-version }}
+          environment-file: environment.yml
+          python-version: ${{ matrix.python-version }}
+          auto-activate-base: false
+    - name: Add conda to system path
+      run: |
+        # $CONDA is an environment variable pointing to the root of the miniconda directory
+        echo $CONDA/bin >> $GITHUB_PATH
     - name: Install dependencies
       run: |
-        pip install --upgrade pip
-        pip install -e .
-        pip install -r requirements.txt
-
+        conda env update --file environment.yml --name base
     - name: Test with pytest
       run: |
         pytest tests/
