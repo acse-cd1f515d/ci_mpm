@@ -33,7 +33,7 @@ jobs:
     - name: Install dependencies
       run: |
         conda update -n base -c defaults conda
-        conda env update --file environment.yml --name base -y
+        conda env update --file environment.yml --name base
         exec bash
         conda activate base
         pip install .
