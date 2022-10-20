@@ -13,6 +13,7 @@ jobs:
     name: Miniconda (${{ matrix.os }}, python${{ matrix.python-version }})
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-20.04, ubuntu-22.04]
         python-version: ['3.7.13', '3.9.13']
@@ -35,10 +36,10 @@ jobs:
         conda update -n base -c defaults conda
         conda env create -f environment.yml -q
         exec bash
-
-    - name: Test with pytest
-      run: |
         conda init bash
         conda activate ci
         pip install .
+
+    - name: Test with pytest
+      run: |
         pytest tests/
