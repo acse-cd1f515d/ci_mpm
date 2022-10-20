@@ -9,8 +9,8 @@ on:
       - master
 
 jobs:
-  miniconda:
-    name: Miniconda (${{ matrix.os }}, python${{ matrix.python-version }})
+  conda:
+    name: conda (${{ matrix.os }}, python${{ matrix.python-version }})
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
