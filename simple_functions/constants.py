@@ -8,6 +8,7 @@ __all__ = ['pi']
 
 
 def pi(terms=1):
+    '''docstring of function pi'''
     return 1./(2.*sqrt(2.)/9801.*rsum(terms))
 
 
