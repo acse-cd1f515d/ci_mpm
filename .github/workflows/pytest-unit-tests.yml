@@ -33,7 +33,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        conda update -n base -c defaults conda
+        conda update -n base -y -q
         conda env create -f environment.yml -q
         exec bash
         conda init bash
