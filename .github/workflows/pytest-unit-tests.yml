@@ -33,9 +33,9 @@ jobs:
     - name: Install dependencies
       run: |
         conda update -n base -c defaults conda
-        conda env update --file environment.yml --name base
+        conda env create -f environment.yml -q
         exec bash
-        conda activate base
+        conda activate test
         pip install .
 
     - name: Test with pytest
