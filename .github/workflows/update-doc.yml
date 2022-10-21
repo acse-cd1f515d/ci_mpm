@@ -26,9 +26,8 @@ jobs:
     
     - name: Generate the latest version documentation
       run: |
-        cd docs
-        sphinx-build -b latex . .
-        pdflatex mpm_la.tex
+        sphinx-build -b latex docs .
+        pdflatex mpm_la.tex -output-directory=docs
 
     - name: Push the latest version documentation
       uses: ad-m/github-push-action@master
