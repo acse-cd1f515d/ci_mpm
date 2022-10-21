@@ -32,4 +32,4 @@ jobs:
     - name: Push the latest version documentation
       uses: ad-m/github-push-action@master
       with:
-        github_token: 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
+        github_token: ${{ secrets.TOKEN }}
