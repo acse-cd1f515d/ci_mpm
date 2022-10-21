@@ -10,19 +10,20 @@ on:
 
 jobs:
   conda:
+    name: conda
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.8
 
-    steps:
-      - uses: conda-incubator/setup-miniconda@v2
-        with:
-          miniconda-version: "latest"
-          channels: defaults, conda-forge
-          use-only-tar-bz2: true
-          auto-update-conda: true
-          auto-activate-base: true
+    - name: Add conda to system path
+      run: |
+        # $CONDA is an environment variable pointing to the root of the miniconda directory
+        $CONDA/bin/conda env update -f environment.yml
 
     - name: Create conda environment
       run: |
@@ -32,4 +33,4 @@ jobs:
       run: |
         conda activate ci
         pip install .
-        pytest tests/
+        $CONDA/bin/pytest tests/
