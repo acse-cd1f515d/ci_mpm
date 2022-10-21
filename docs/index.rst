@@ -11,4 +11,4 @@ This module implements Gaussian elimination [1]_ for :obj:`list of lists` object
   :members: pi, my_sum, factorial
 
 .. rubric:: References
-..[1] https://mathworld.wolfram.com/GaussianElimination.html
+[1] https://mathworld.wolfram.com/GaussianElimination.html
