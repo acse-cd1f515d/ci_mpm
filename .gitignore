@@ -1,0 +1,7 @@
+.eggs
+.pytest_cache
+simple_functions.egg-info
+build
+flake8.yml
+tests/__pycache__
+simple_functions/__pycache__

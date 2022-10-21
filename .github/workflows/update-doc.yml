@@ -1,0 +1,36 @@
+name: update-doc
+
+on:
+    push:
+      branches:
+        - master
+
+jobs:
+  doc:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get install texlive
+        pip install --upgrade pip
+        pip install sphinx
+    
+    - name: Generate the latest version documentation
+      run: |
+        sphinx-build -b latex docs docs
+        cd docs
+        pdflatex mpm_la.tex
+
+    - name: Push the latest version documentation
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: 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
