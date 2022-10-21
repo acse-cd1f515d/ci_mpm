@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.10.21)  21 OCT 2022 09:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.10.21)  21 OCT 2022 10:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**ci_mpm.tex -output-directory=docs
+**ci_mpm.tex
 (./ci_mpm.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (./sphinxmanual.cls
@@ -669,7 +669,7 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count297
 \l__pdf_internal_box=\box113
 )
-No file ci_mpm.aux.
+(./ci_mpm.aux)
 \openout1 = `ci_mpm.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
@@ -692,7 +692,7 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 70.
 LaTeX Font Info:    ... okay on input line 70.
 LaTeX Font Info:    Trying to load font information for T1+qtm on input line 70
 .
-(/usr/share/texmf/tex/latex/tex-gyre/t1qtm.fd
+ (/usr/share/texmf/tex/latex/tex-gyre/t1qtm.fd
 File: t1qtm.fd 2009/09/25 v1.2 font definition file for T1/qtm
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -769,19 +769,21 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 70.
 LaTeX Info: Redefining \pageref on input line 70.
 LaTeX Info: Redefining \nameref on input line 70.
+
+(./ci_mpm.out) (./ci_mpm.out)
 \@outlinefile=\write5
 \openout5 = `ci_mpm.out'.
 
 Package hyperref Info: Option `pageanchor' set `false' on input line 78.
 LaTeX Font Info:    Trying to load font information for T1+qhv on input line 78
 .
-
-(/usr/share/texmf/tex/latex/tex-gyre/t1qhv.fd
+ (/usr/share/texmf/tex/latex/tex-gyre/t1qhv.fd
 File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 )<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
 LaTeX Font Info:    Trying to load font information for U+msa on input line 78.
 
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 78.
@@ -794,7 +796,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 
-]
+] (./ci_mpm.toc)
 \tf@toc=\write6
 \openout6 = `ci_mpm.toc'.
 
@@ -818,35 +820,26 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 100.
  (./ci_mpm.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 100.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 100.
-
-
-Package rerunfilecheck Warning: File `ci_mpm.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `ci_mpm.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  B7CDC1DD66F63F4035BFAC6506F562D1;126.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `ci_mpm.out' has not changed.
+(rerunfilecheck)             Checksum: B7CDC1DD66F63F4035BFAC6506F562D1;126.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 100.
  ) 
 Here is how much of TeX's memory you used:
- 14334 strings out of 483183
- 212036 string characters out of 5966291
- 474996 words of memory out of 5000000
- 28979 multiletter control sequences out of 15000+600000
- 582342 words of font info for 72 fonts, out of 8000000 for 9000
+ 14347 strings out of 483183
+ 212194 string characters out of 5966291
+ 475202 words of memory out of 5000000
+ 28982 multiletter control sequences out of 15000+600000
+ 585189 words of font info for 73 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
- 38i,11n,51p,271b,390s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,51p,248b,390s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/share/texmf/fonts/t
 ype1/public/tex-gyre/qhvb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtm
-r.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on ci_mpm.pdf (5 pages, 56553 bytes).
+b.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb>
+Output written on ci_mpm.pdf (5 pages, 79168 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
  9 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
