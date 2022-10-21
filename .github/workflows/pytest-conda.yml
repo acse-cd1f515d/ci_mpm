@@ -27,7 +27,7 @@ jobs:
 
     - name: Test with pytest
       run: |
-        exec bash
+        reset
         conda init bash
         conda activate ci
         pip install .
