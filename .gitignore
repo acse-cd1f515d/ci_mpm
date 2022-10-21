@@ -7,3 +7,10 @@ tests/__pycache__
 simple_functions/__pycache__
 /.github/workflows/pytest-conda.yml
 /.github/workflows/pytest-unit-tests.yml
+*.sty
+*.cls
+*.xdy
+*.ist
+*.bat
+Makefile
+latex*
