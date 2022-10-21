@@ -10,7 +10,6 @@ on:
 
 jobs:
   conda:
-    name: conda
     runs-on: ubuntu-latest
 
     steps:
