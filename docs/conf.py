@@ -5,7 +5,7 @@ import sys
 # This command appends the directory one level up, in a cross-platform way.
 sys.path.insert(0, os.path.abspath(os.sep.join((os.curdir, '..'))))
 
-project = 'l5mod'
+project = 'ci_mpm'
 extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.napoleon',
               'sphinx.ext.mathjax']
