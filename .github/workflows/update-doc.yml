@@ -27,14 +27,8 @@ jobs:
     - name: Generate the latest version documentation
       run: |
         sphinx-build -b latex docs .
-        pdflatex ci_mpm.tex -output-directory=docs
-    
-    - name: commit
-      run: |
-        git config --global user.email jingyang.min22@imperial.ac.uk
-        git config --global user.name acse-cd1f515d
-        git add .
-        git commit -a -m 'update doc'
+        pdflatex ci_mpm.tex
+        mv ci_mpm.pdf docs
 
     - name: Push the latest version documentation
       uses: ad-m/github-push-action@master
