@@ -27,7 +27,6 @@ jobs:
 
     - name: Test with pytest
       run: |
-        source ~/.bashrc
         conda init bash
         conda activate ci
         pip install .
